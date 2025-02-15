@@ -39,3 +39,11 @@ function calculateShippingCost(weight, location, expedited = false) //function t
 calculateShippingCost(10, "USA", true); // test data: "Shipping Cost: $20.00"
 calculateShippingCost(5, "Canada", false); // test data: "Shipping Cost: $13.50"
     
+//Task 5: Business Loan Interest Calculation
+function calculateLoanInterest(principal, rate, years)
+     {
+        let interest = princiapl * rate * years; // formula that will calcualte total loan interest
+        return `Total Interest: $${interest.toFixed(2)}`; //to.Fixed will format the number value to decimal places
+     }
+console.log(calculateLoanInterest(1000, 0.05, 3)); // test data "Total Interest: $150.00"
+console.log(calculateLoanInterest(5000, 0.07, 5)); // test data: "Total Interest: $1750.00"
