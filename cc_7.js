@@ -52,3 +52,16 @@ console.log(calculateLoanInterest(5000, 0.07, 5)); // test data: "Total Interest
 let transactions = [500, 1200, 3000, 800, 2200]; //declaring an array with 5 different amouunts 
 let filterLargeTransactions = transactions.filter(transactions => transactions > 1000); // function that will filter transactions that are larger than $1000
 console.log(filterLargeTransactions); // test data: [1200, 3000, 2200]
+
+//Task 7: Budget Tracker 
+function createBudgetTracker() //function that will return another function
+    { 
+        let totalBudget = 0; //initializing the beginning budget
+        return function(budgetExpense) 
+        {//will add budgetExpenses to the account everytime to revise account balance
+            totalBudget -= budgetExpense; 
+            console.log(`Current Balance: $${totalBudget}`); 
+    };
+let budget = createBudgetTracker(); 
+budget(300); // test data: "Current Balance: -$300"
+budget(200); // test data: "Current Balance: -$500"
