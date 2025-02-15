@@ -42,7 +42,7 @@ calculateShippingCost(5, "Canada", false); // test data: "Shipping Cost: $13.50"
 //Task 5: Business Loan Interest Calculation
 function calculateLoanInterest(principal, rate, years)
      {
-        let interest = princiapl * rate * years; // formula that will calcualte total loan interest
+        let interest = principal * rate * years; // formula that will calcualte total loan interest
         return `Total Interest: $${interest.toFixed(2)}`; //to.Fixed will format the number value to decimal places
      }
 console.log(calculateLoanInterest(1000, 0.05, 3)); // test data "Total Interest: $150.00"
@@ -61,7 +61,21 @@ function createBudgetTracker() //function that will return another function
         {//will add budgetExpenses to the account everytime to revise account balance
             totalBudget -= budgetExpense; 
             console.log(`Current Balance: $${totalBudget}`); 
+        }
     };
 let budget = createBudgetTracker(); 
 budget(300); // test data: "Current Balance: -$300"
 budget(200); // test data: "Current Balance: -$500"
+
+//Task 8: Business Growth Projection
+function calculateGrowth(year, revenue)
+{
+    if (year >= 10) //growth for 10 years
+    {  
+        return revenue; 
+    }  
+return calculateGrowth(year + 1, revenue * 1.05); //will annually calculate 5% until year 10 is reached
+}
+
+console.log(`Projected Revenue: $${calculateGrowth(8, 1000).toFixed(2)}`); // test data: "Projected Revenue: $1102.50"
+console.log(`Projected Revenue: $${calculateGrowth(5, 5000).toFixed(2)}`); // test data: "Projected Revenue: $5525.63"
