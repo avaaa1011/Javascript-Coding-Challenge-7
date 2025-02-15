@@ -47,3 +47,8 @@ function calculateLoanInterest(principal, rate, years)
      }
 console.log(calculateLoanInterest(1000, 0.05, 3)); // test data "Total Interest: $150.00"
 console.log(calculateLoanInterest(5000, 0.07, 5)); // test data: "Total Interest: $1750.00"
+
+//Task 6: Higher Order Functions 
+let transactions = [500, 1200, 3000, 800, 2200]; //declaring an array with 5 different amouunts 
+let filterLargeTransactions = transactions.filter(transactions => transactions > 1000); // function that will filter transactions that are larger than $1000
+console.log(filterLargeTransactions); // test data: [1200, 3000, 2200]
