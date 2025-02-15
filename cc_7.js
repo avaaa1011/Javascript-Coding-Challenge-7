@@ -16,3 +16,5 @@ let calculateHourlyWage = function(salary, hoursPerWeek)//declaring a function t
     };
     console.log(calculateHourlyWage(52000, 40)); // Test data: "Hourly Wage: $25.00"
     console.log(calculateHourlyWage(75000, 35)); // Test data: "Hourly Wage: $41.21"
+
+//Task 3: Customer Loyalty Points 
