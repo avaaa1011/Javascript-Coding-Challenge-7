@@ -18,3 +18,11 @@ let calculateHourlyWage = function(salary, hoursPerWeek)//declaring a function t
     console.log(calculateHourlyWage(75000, 35)); // Test data: "Hourly Wage: $41.21"
 
 //Task 3: Customer Loyalty Points 
+const calculateLoyaltyDiscount = (amount, years) => 
+    {
+        let discount = years >= 5 ? 0.15 : years >= 3 ? 0.10 : 0.05; //arrow function that determines your discount based on loyalty years
+        let discountedPrice = amount * (1 - discount); //function that will apply the discount 
+        return `Discounted Price: $${discountedPrice.toFixed(2)}`; //to.Fixed will format the number value to decimal places
+    }
+    console.log(calculateLoyaltyDiscount(100, 6)); // test data: "Discounted Price: $85.00"
+    console.log(calculateLoyaltyDiscount(200, 2)); // test data: "Discounted Price: $190.00"
